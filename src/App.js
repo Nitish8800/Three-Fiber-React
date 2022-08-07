@@ -1,19 +1,8 @@
-import React, { Suspense, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import "./App.css";
 import { OrbitControls, Stage } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import Model from "./components/Model";
-
-import { useThree } from "react-three-fiber";
-
-function GroundPlane() {
-  return (
-    <mesh receiveShadow rotation={[5, 0, 0]} position={[0, -1, 0]}>
-      <planeBufferGeometry attach="geometry" args={[500, 500]} />
-      <meshStandardMaterial attach="material" color="blue" />
-    </mesh>
-  );
-}
 
 function BackDrop() {
   return (
